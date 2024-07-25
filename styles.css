@@ -33,10 +33,11 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     color: var(--message-text-color);
+    margin-top: 5em;
 }
 
 .message h2 {
     color: var(--message-text-color);
-    font-size: 24px;
+    font-size: 30px;
     margin-top: 0;
 }
