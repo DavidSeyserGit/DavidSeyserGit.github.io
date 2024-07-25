@@ -102,13 +102,13 @@
             }
 
             // Initialize the page
-            updateDailyContent();
-            updateCountdown();
-            setInterval(updateCountdown, 1000 * 60 * 60); // Update countdown every hour
-
-            // Check for the secret parameter in the URL
             const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get("love") !== "true") {
+            console.log("URL Params:", urlParams.toString()); // Log URL parameters
+            if (urlParams.get("love") === "true") {
+                updateDailyContent();
+                updateCountdown();
+                setInterval(updateCountdown, 1000 * 60 * 60); // Update countdown every hour
+            } else {
                 document.body.innerHTML =
                     "<h1>Welcome to My GitHub Page</h1><p>This is the public content of my GitHub Page.</p>";
             }
