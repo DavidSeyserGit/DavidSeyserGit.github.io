@@ -21,37 +21,43 @@ body {
 
 .message {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background-color: var(--message-background);
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     max-width: 600px;
+    width: 100%;
     margin: 20px auto;
 }
 
-h1 {
+h1,
+h2 {
     color: var(--heading-color);
+    margin-bottom: 20px;
 }
 
-#heartfelt-message {
+#daily-title {
     font-size: 24px;
-    font-weight: bold;
-    color: var(--message-text-color);
-    margin-top: 1em;
+    color: var(--heading-color);
+    margin-top: 20px;
 }
 
-.message h2 {
-    color: var(--message-text-color);
-    font-size: 30px;
-    margin-top: 0;
-}
-
+#heartfelt-message,
 #love-quote,
-#memory,
-#countdown {
+#memory {
     font-size: 18px;
     color: var(--message-text-color);
-    margin: 15px 0;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+#countdown {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--heading-color);
+    margin: 20px 0;
 }
 
 button {
@@ -68,4 +74,5 @@ button {
 
 button:hover {
     background-color: var(--heading-color);
+    color: var(--message-background);
 }
