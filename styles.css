@@ -13,6 +13,10 @@ body {
     padding: 20px;
     background-color: var(--background-color);
     color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .message {
@@ -33,11 +37,35 @@ h1 {
     font-size: 24px;
     font-weight: bold;
     color: var(--message-text-color);
-    margin-top: 5em;
+    margin-top: 1em;
 }
 
 .message h2 {
     color: var(--message-text-color);
     font-size: 30px;
     margin-top: 0;
+}
+
+#love-quote,
+#memory,
+#countdown {
+    font-size: 18px;
+    color: var(--message-text-color);
+    margin: 15px 0;
+}
+
+button {
+    background-color: var(--text-color);
+    color: var(--message-background);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--heading-color);
 }

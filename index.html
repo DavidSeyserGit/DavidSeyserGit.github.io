@@ -3,41 +3,114 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My GitHub Page</title>
+        <title>A Daily Surprise for You</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div id="secret-message" class="message" style="display: none">
-            <h2>A Special Message for You</h2>
+        <div class="message">
+            <h1>A Daily Surprise for <span id="girlfriend-name"></span></h1>
+            <h2 id="daily-title"></h2>
             <p id="heartfelt-message"></p>
+            <p id="love-quote"></p>
+            <p id="memory"></p>
+            <h2>Countdown to Our Next Anniversary</h2>
+            <p id="countdown"></p>
+            <button onclick="generatePoem()">Generate a Love Poem</button>
         </div>
 
         <script>
-            const messages = [
-                "Your smile brightens my day more than the morning sun.",
-                "Every moment with you feels like a beautiful dream come true.",
-                "You're the missing piece that makes my life complete.",
-                "Your love is the greatest gift I've ever received.",
-                "With you, every day feels like Valentine's Day.🥰",
+            const girlfriendName = "Sweetheart"; // Replace with your girlfriend's name
+            const anniversary = "2024-12-31"; // Replace with your anniversary date (YYYY-MM-DD)
+
+            const dailyTitles = [
+                "A Message Just for You",
+                "Today's Love Note",
+                "A Thought for My Love",
+                "From My Heart to Yours",
+                "A Daily Reminder",
             ];
 
-            function displayRandomMessage() {
-                const messageElement =
-                    document.getElementById("heartfelt-message");
-                const randomIndex = Math.floor(Math.random() * messages.length);
-                messageElement.textContent = messages[randomIndex];
+            const dailyMessages = [
+                "You're the first thing I think about each morning.",
+                "Your love makes every day feel like an adventure.",
+                "I'm so grateful to have you in my life.",
+                "You make my world brighter just by being you.",
+                "I fall in love with you more and more each day.",
+                "Your smile is my favorite sight in the whole world.",
+                "I'm looking forward to making more memories with you.",
+            ];
+
+            const loveQuotes = [
+                "In all the world, there is no heart for me like yours. - Maya Angelou",
+                "I love you not only for what you are, but for what I am when I am with you. - Elizabeth Barrett Browning",
+                "You are my today and all of my tomorrows. - Leo Christopher",
+                "I love you more than I have ever found a way to say to you. - Ben Folds",
+                "I have found the one whom my soul loves. - Song of Solomon 3:4",
+            ];
+
+            const memories = [
+                "Remember our first date? I was so nervous, but you made me feel so comfortable.",
+                "That time we got caught in the rain and ended up dancing in it.",
+                "Our first road trip together was full of wrong turns, but we made it an adventure.",
+                "Remember when we stayed up all night talking and watching the sunrise?",
+                "That cooking disaster that turned into our favorite takeout night.",
+                "Our first New Year's Eve together, counting down and sharing that magical kiss.",
+            ];
+
+            function getRandomItem(array, salt = "") {
+                const today = new Date();
+                const seed =
+                    today.getFullYear() * 10000 +
+                    (today.getMonth() + 1) * 100 +
+                    today.getDate() +
+                    salt;
+                let x = Math.sin(seed) * 10000;
+                return array[Math.floor((x - Math.floor(x)) * array.length)];
             }
 
-            function showSecretMessage() {
-                document.getElementById("secret-message").style.display =
-                    "block";
-                displayRandomMessage();
+            function updateDailyContent() {
+                document.getElementById("girlfriend-name").textContent =
+                    girlfriendName;
+                document.getElementById("daily-title").textContent =
+                    getRandomItem(dailyTitles, "title");
+                document.getElementById("heartfelt-message").textContent =
+                    getRandomItem(dailyMessages, "message");
+                document.getElementById("love-quote").textContent =
+                    getRandomItem(loveQuotes, "quote");
+                document.getElementById("memory").textContent = getRandomItem(
+                    memories,
+                    "memory",
+                );
             }
+
+            function updateCountdown() {
+                const now = new Date();
+                const anniversaryDate = new Date(anniversary);
+                const timeDiff = anniversaryDate - now;
+                const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+                document.getElementById("countdown").textContent =
+                    `${days} days until our anniversary!`;
+            }
+
+            function generatePoem() {
+                const poems = [
+                    `Roses are red,\nViolets are blue,\n${girlfriendName}, my love,\nMy heart beats for you.`,
+                    `In the garden of life,\nYou're the loveliest flower,\n${girlfriendName}, my dear,\nYou're my superpower.`,
+                    `With every sunrise,\nMy love for you grows,\n${girlfriendName}, my sweetheart,\nThis much my heart knows.`,
+                ];
+                alert(getRandomItem(poems, "poem" + new Date().getTime()));
+            }
+
+            // Initialize the page
+            updateDailyContent();
+            updateCountdown();
+            setInterval(updateCountdown, 1000 * 60 * 60); // Update countdown every hour
 
             // Check for the secret parameter in the URL
             const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get("love") === "true") {
-                showSecretMessage();
+            if (urlParams.get("love") !== "true") {
+                document.body.innerHTML =
+                    "<h1>Welcome to My GitHub Page</h1><p>This is the public content of my GitHub Page.</p>";
             }
         </script>
     </body>
