@@ -1,9 +1,9 @@
 :root {
     --background-color: #edede9;
-    --text-color: #14213d;
+    --text-color: #1d3557;
     --message-background: #d6ccc2;
     --message-text-color: #14213d;
-    --heading-color: #d5bdaf;
+    --heading-color: #1d3557;
     --hover-color: #d4a373;
 }
 
@@ -32,18 +32,22 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .topbar .nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 3rem;
+    height: 50px;
+    width: 100%;
+    max-width: 1200px; /* Adjust max width as needed */
 }
 
 .topbar .nav li {
-    display: inline;
-    margin: 0 20px;
+    margin: 0 10px; /* Adjust spacing as needed */
 }
 
 .topbar .nav a {
@@ -52,6 +56,7 @@ body {
     padding: 14px 20px;
     display: block;
     transition: background-color 0.3s;
+    text-align: center;
 }
 
 .topbar .nav a:hover {
@@ -72,4 +77,31 @@ h1 {
 
 p {
     color: var(--text-color); /* Ensure text color is consistent */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .topbar .nav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        height: auto;
+    }
+
+    .topbar .nav li {
+        margin: 10px 0; /* Adjust spacing for vertical layout */
+    }
+}
+
+@media (min-width: 769px) {
+    .topbar .nav {
+        flex-direction: row; /* Horizontal layout on larger screens */
+    }
+
+    .topbar .nav li {
+        margin: 0 20px; /* Adjust spacing for horizontal layout */
+    }
+}
+.greeting {
+    justify-content: center;
+    margin-top: 10rem;
+    font-size: 5rem;
 }
