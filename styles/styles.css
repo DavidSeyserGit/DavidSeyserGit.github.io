@@ -1,9 +1,10 @@
 :root {
-    --background-color: #023047;
-    --text-color: #fefae0;
-    --message-background: #219ebc;
-    --message-text-color: #8ecae6;
-    --heading-color: #fb8500;
+    --background-color: #edede9;
+    --text-color: #14213d;
+    --message-background: #d6ccc2;
+    --message-text-color: #14213d;
+    --heading-color: #f5ebe0;
+    --hover-color: #d5bdaf;
 }
 
 /* General reset for better cross-browser consistency */
@@ -37,7 +38,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 3rem;
 }
 
 .topbar .nav li {
@@ -55,7 +56,7 @@ body {
 
 .topbar .nav a:hover {
     background-color: var(
-        --heading-color
+        --hover-color
     ); /* Use custom heading color for hover effect */
 }
 
