@@ -3,7 +3,7 @@
     "name": "Robothon",
     "description": "Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "As a team of passionate students in the field of robotics, we are eager to compete in the Robothon® - The Grand Challenge. Our goal is to showcase our skills and gain practical experience in a real-world competition setting while networking with other robotics experts from around the globe. With diverse backgrounds in mechatronics, mechanical engineering, electrical engineering, and high school education, we bring innovative solutions from various perspectives. We believe that our knowledge and abilities will enable us to successfully complete the tasks and make a valuable contribution to improving industrial recycling processes",
-    "images": ["images/robothon.jpg", "images/jury.jpeg", "images/buehne.jpeg"],
+    "images": ["images/jury.jpeg", "images/buehne.jpeg"],
     "link": "https://github.com/SebastianNeuhofer/Robothon-2023-Grand-Challenge-TechWi-e-nBot-Team-Report",
     "extraLinks": [
       {
