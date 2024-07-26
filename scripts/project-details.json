@@ -1,7 +1,7 @@
 {
   "project1": {
     "name": "Robothon",
-    "description": "Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "description": "TechWi-e-nBot Team Report ",
     "longDescription": "As a team of passionate students in the field of robotics, we are eager to compete in the Robothon® - The Grand Challenge. Our goal is to showcase our skills and gain practical experience in a real-world competition setting while networking with other robotics experts from around the globe. With diverse backgrounds in mechatronics, mechanical engineering, electrical engineering, and high school education, we bring innovative solutions from various perspectives. We believe that our knowledge and abilities will enable us to successfully complete the tasks and make a valuable contribution to improving industrial recycling processes",
     "images": ["images/jury.jpeg", "images/buehne.jpeg"],
     "link": "https://github.com/SebastianNeuhofer/Robothon-2023-Grand-Challenge-TechWi-e-nBot-Team-Report",
@@ -14,16 +14,21 @@
     ]
   },
   "project2": {
-    "name": "Robothon",
-    "description": "Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "longDescription": "This is a more detailed description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia, sapien non rhoncus pulvinar, urna turpis semper erat, in facilisis libero odio vel risus.",
-    "images": ["images/robothon.jpg", "images/jury.jpeg", "images/buehne.jpeg"],
-    "link": "https://github.com/SebastianNeuhofer/Robothon-2023-Grand-Challenge-TechWi-e-nBot-Team-Report",
+    "name": "Hexapod",
+    "description": "For my university course i had to build a hexapod robot.",
+    "longDescription": "",
+    "images": [
+      "images/hexapod.png",
+      "images/electrical_hexapod.png",
+      "images/mechanics_hexapod.png",
+      "images/software_hexapod.png"
+    ],
+    "link": "https://github.com/DavidSeyserGit/HexaPod",
     "extraLinks": [
       {
-        "type": "YouTube",
-        "url": "https://www.youtube.com/watch?v=wlw63DxokdQ",
-        "text": "Watch on YouTube"
+        "type": "",
+        "url": "",
+        "text": ""
       }
     ]
   },
