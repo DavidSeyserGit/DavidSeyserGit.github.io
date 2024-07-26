@@ -1,0 +1,74 @@
+:root {
+    --background-color: #023047;
+    --text-color: #fefae0;
+    --message-background: #219ebc;
+    --message-text-color: #8ecae6;
+    --heading-color: #fb8500;
+}
+
+/* General reset for better cross-browser consistency */
+body,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color); /* Use custom background color */
+    color: var(--text-color); /* Use custom text color */
+}
+
+/* Topbar styling */
+.topbar {
+    background-color: var(
+        --message-background
+    ); /* Use custom message background color */
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.topbar .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.topbar .nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.topbar .nav a {
+    color: var(--message-text-color); /* Use custom message text color */
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.topbar .nav a:hover {
+    background-color: var(
+        --heading-color
+    ); /* Use custom heading color for hover effect */
+}
+
+/* Content styling */
+.content {
+    margin-top: 60px; /* To avoid content being hidden behind the topbar */
+    padding: 20px;
+}
+
+h1 {
+    color: var(--heading-color); /* Use custom heading color */
+}
+
+p {
+    color: var(--text-color); /* Ensure text color is consistent */
+}
